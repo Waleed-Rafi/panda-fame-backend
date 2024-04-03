@@ -112,7 +112,7 @@ app.post("/webhook/payment", async (request, response) => {
   }
 });
 
-const port = 8000; // Replace with the desired port number
+const port = process.env.PORT || 8000; // Replace with the desired port number
 
 connectDB()
   .then(() => {
